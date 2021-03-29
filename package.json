@@ -1,6 +1,6 @@
 {
   "name": "most-virtual-scheduler",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A virtual scheduler for @most/core",
   "main": "lib/index.js",
   "module": "esm/index.js",
