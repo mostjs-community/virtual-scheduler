@@ -12,3 +12,23 @@ npm i --save most-virtual-scheduler
 # Yarn
 yarn add most-virtual-scheduler
 ```
+
+## Usage
+
+```js
+import { createVirtualScheduler } from 'most-virtual-scheduler'
+
+// Construct our VirtualTimer-Scheduler pair
+const [timer, scheduler] = createVirtualScheduler()
+
+// Construct a stream
+const stream = ... 
+
+// Run your stream
+runEffects(stream, scheduler)
+
+// Manually "progress" time by 100 milliseconds
+// All tasks scheduled to be run between 0 and 100 will be run
+// in the order they were scheduled.
+timer.progressTimeBy(100)
+```
